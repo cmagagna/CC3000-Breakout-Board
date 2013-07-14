@@ -2138,8 +2138,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="TP4" library="SparkFun-Passives" deviceset="TEST-POINT" device="2"/>
 <part name="TP5" library="SparkFun-Passives" deviceset="TEST-POINT" device="2"/>
 <part name="TP3" library="SparkFun-Passives" deviceset="TEST-POINT" device="2"/>
-<part name="L2" library="SparkFun" deviceset="INDUCTOR" device="0402" value="2.2nH(NL)"/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M04" device="PTH" value="Jumper1"/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M04" device="PTH" value="Jumper2"/>
 </parts>
@@ -2149,6 +2147,7 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <text x="301.26" y="27.9" size="1.9304" layer="94" font="vector" ratio="6">Chris Magagna, based on Matt Bigarani's original design</text>
 <text x="301.26" y="23.9" size="2.54" layer="94" font="vector">cmagagna@yahoo.com</text>
 <text x="301.26" y="31.9" size="2.54" layer="94" font="vector">TI CC3000 Breakout</text>
+<text x="391.16" y="7.62" size="2.54" layer="104">1.1</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="182.88" y="109.22"/>
@@ -2197,11 +2196,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="TP4" gate="G$1" x="129.54" y="180.34" rot="R180"/>
 <instance part="TP5" gate="G$1" x="129.54" y="170.18" rot="R180"/>
 <instance part="TP3" gate="G$1" x="289.56" y="154.94"/>
-<instance part="L2" gate="G$1" x="152.4" y="223.52" smashed="yes" rot="R180">
-<attribute name="NAME" x="154.94" y="220.98" size="1.778" layer="95"/>
-<attribute name="VALUE" x="154.94" y="218.44" size="1.778" layer="96"/>
-</instance>
-<instance part="GND10" gate="1" x="152.4" y="210.82"/>
 <instance part="JP1" gate="G$1" x="73.66" y="88.9"/>
 <instance part="JP2" gate="G$1" x="363.22" y="91.44" rot="R180"/>
 </instances>
@@ -2358,11 +2352,6 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <label x="335.28" y="86.36" size="1.778" layer="95" rot="R180"/>
 <pinref part="JP2" gate="G$1" pin="3"/>
 </segment>
-<segment>
-<pinref part="GND10" gate="1" pin="GND"/>
-<pinref part="L2" gate="G$1" pin="1"/>
-<wire x1="152.4" y1="213.36" x2="152.4" y2="215.9" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="SPI_CLK" class="0">
 <segment>
@@ -2415,12 +2404,8 @@ Standard 4-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <net name="N$15" class="2">
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="233.68" x2="152.4" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="SIGNAL"/>
-<pinref part="L2" gate="G$1" pin="2"/>
-<wire x1="152.4" y1="233.68" x2="160.02" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="231.14" x2="152.4" y2="233.68" width="0.1524" layer="91"/>
-<junction x="152.4" y="233.68"/>
+<wire x1="144.78" y1="233.68" x2="160.02" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="3">
