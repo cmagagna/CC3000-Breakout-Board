@@ -148,8 +148,8 @@
 <text x="15.24" y="0.762" size="2.032" layer="26" rot="MR90">CC3000 Breakout</text>
 <text x="13.208" y="0.762" size="1.4224" layer="26" rot="MR90">V1.0.1</text>
 <text x="10.414" y="0.762" size="2.032" layer="26" rot="MR90">(C)2013 Bubbletronics</text>
-<text x="3.048" y="0.762" size="2.032" layer="26" rot="MR90">CC by NC SA</text>
-<text x="7.366" y="0.762" size="1.9304" layer="26" rot="MR90">http://bubbletronics.com</text>
+<text x="7.62" y="0.762" size="2.032" layer="26" rot="MR90">CC by NC SA</text>
+<text x="3.048" y="0.762" size="1.9304" layer="26" rot="MR90">bubbletronics.com</text>
 </plain>
 <libraries>
 <library name="centerblack_engineering">
