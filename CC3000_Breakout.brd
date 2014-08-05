@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -146,7 +146,7 @@
 <text x="18.034" y="2.286" size="1.524" layer="25" rot="R180">CLK</text>
 <text x="10.541" y="31.9278" size="1.778" layer="25">CC3000</text>
 <text x="15.24" y="0.762" size="2.032" layer="26" rot="MR90">CC3000 Breakout</text>
-<text x="13.208" y="0.762" size="1.4224" layer="26" rot="MR90">V1.3</text>
+<text x="13.208" y="0.762" size="1.4224" layer="26" rot="MR90">V1.4</text>
 <text x="9.398" y="0.762" size="2.032" layer="26" rot="MR90">(C)2013 Bubbletronics</text>
 <text x="6.604" y="0.762" size="1.778" layer="26" rot="MR90">CC by NC SA</text>
 <text x="3.048" y="0.762" size="1.9304" layer="26" rot="MR90">bubbletronics.com</text>
@@ -344,14 +344,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 <class number="1" name="vcc" width="1.016" drill="0">
 <clearance class="1" value="0.2032"/>
 </class>
-<class number="2" name="antenna" width="0.36321875" drill="0">
-<clearance class="2" value="0.3048"/>
+<class number="2" name="antenna" width="0.95" drill="0">
+<clearance class="2" value="0.1524"/>
 </class>
 <class number="3" name="1.8v" width="0.4572" drill="0">
 <clearance class="3" value="0.254"/>
 </class>
 </classes>
-<designrules name="LaenPCBOrder *">
+<designrules name="Meets both ITEADStudio and Osh Park">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -359,12 +359,18 @@ die meisten Anwendungen passen. Sollte ihre Platine
 besondere Anforderungen haben, treffen Sie die erforderlichen
 Einstellungen hier und speichern die Design Rules unter 
 einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
+<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-Please make sure your boards conform to these design rules.</description>
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.</description>
+<description language="zh">&lt;b&gt;Seeed Studio EAGLE Design Rules&lt;/b&gt;
+</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
-<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
 <param name="mdWireWire" value="6mil"/>
 <param name="mdWirePad" value="6mil"/>
 <param name="mdWireVia" value="6mil"/>
@@ -377,7 +383,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
 <param name="mdCopperDimension" value="15mil"/>
-<param name="mdDrill" value="6mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
 <param name="msWidth" value="6mil"/>
 <param name="msDrill" value="13mil"/>
@@ -390,11 +396,11 @@ Please make sure your boards conform to these design rules.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="7mil"/>
+<param name="rlMinPadTop" value="10mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="7mil"/>
+<param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="7mil"/>
+<param name="rlMinPadBottom" value="10mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
 <param name="rlMinViaOuter" value="7mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
@@ -406,7 +412,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="rlMaxMicroViaInner" value="20mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
-<param name="psFirst" value="-1"/>
+<param name="psFirst" value="0"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
@@ -415,7 +421,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="13mil"/>
+<param name="mlViaStopLimit" value="100mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -426,7 +432,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
-<param name="checkRestrict" value="1"/>
+<param name="checkRestrict" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -536,13 +542,13 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="19.939" y="15.6845" size="0.6096" layer="27" rot="R90"/>
 </element>
 <element name="C2" library="SparkFun" package="0402-CAP" value="10pF" x="7.4295" y="28.6766" smashed="yes" rot="R270">
-<attribute name="VALUE" x="5.5245" y="29.2481" size="0.4064" layer="27" rot="R270"/>
+<attribute name="VALUE" x="9.017" y="29.6926" size="0.6096" layer="27" rot="R270"/>
 </element>
 <element name="C1" library="SparkFun" package="0402-CAP" value="2.2pF" x="7.4295" y="32.766" smashed="yes" rot="R270">
-<attribute name="VALUE" x="5.5245" y="33.5915" size="0.4064" layer="27" rot="R270"/>
+<attribute name="VALUE" x="5.3975" y="34.0995" size="0.6096" layer="27" rot="R270"/>
 </element>
 <element name="L1" library="SparkFun" package="C0402" value="2.2nH" x="6.7818" y="30.734" smashed="yes">
-<attribute name="VALUE" x="5.207" y="30.0863" size="0.4064" layer="27" rot="R90"/>
+<attribute name="VALUE" x="5.207" y="29.5148" size="0.6096" layer="27" rot="R90"/>
 </element>
 <element name="FUNC" library="SparkFun-Passives" package="SJ_2S-TRACE" value="SOLDERJUMPERTRACE" x="1.27" y="16.51" smashed="yes" rot="R270">
 <attribute name="NAME" x="1.016" y="15.4305" size="0.8128" layer="25" rot="R270"/>
@@ -620,31 +626,14 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="20.828" y="28.448"/>
 <vertex x="20.828" y="0"/>
 </polygon>
-<via x="8.3312" y="26.6065" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5471" y="28.0162" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="29.4386" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="31.8008" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="9.4996" y="34.3662" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.4582" y="27.305" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="31.496" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="32.893" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="32.2072" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="27.686" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.8138" y="34.2138" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="30.8102" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.35" y="34.0106" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="33.274" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="29.6672" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="7.6962" y="35.7378" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.5278" y="27.0256" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.3312" y="36.0934" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="30.1244" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="7.1628" y="35.2298" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.5278" y="26.3398" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="29.0322" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="34.2646" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="33.5788" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="28.3718" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.1854" y="28.7528" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.6172" y="28.2194" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="11.303" y="28.2194" extent="1-16" drill="0.3302" diameter="0.0254"/>
@@ -698,8 +687,8 @@ Please make sure your boards conform to these design rules.</description>
 <via x="10.414" y="17.78" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="14.732" y="17.78" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="14.732" y="21.336" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="9.8044" y="26.5811" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="11.8364" y="26.5811" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="9.8679" y="27.0891" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="11.9634" y="27.0256" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="12.192" y="8.89" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="10.0584" y="6.0071" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="12.3444" y="6.0071" extent="1-16" drill="0.3302" diameter="0.0254"/>
@@ -711,9 +700,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="10.0584" y="0.9271" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="13.1064" y="0.9271" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="19.304" y="10.922" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.3246" y="32.5374" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="1.27" y="27.178" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="6.7564" y="34.6202" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="3.048" y="28.448" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="3.048" y="30.988" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="3.048" y="33.528" extent="1-16" drill="0.3302" diameter="0.0254"/>
@@ -728,14 +715,30 @@ Please make sure your boards conform to these design rules.</description>
 <via x="14.478" y="7.874" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="14.8844" y="4.9911" extent="1-16" drill="0.3302" diameter="0.0254"/>
 <via x="17.9324" y="2.7051" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5344" y="33.5788" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5344" y="32.893" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5598" y="32.1818" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.509" y="31.496" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.4582" y="30.8102" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.4582" y="30.099" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5344" y="29.4132" extent="1-16" drill="0.3302" diameter="0.0254"/>
-<via x="8.5344" y="28.7274" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="9.4869" y="34.2646" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.7884" y="34.0106" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="33.3121" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="32.5501" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="31.7881" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="31.0261" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="30.2641" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="29.5021" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="28.7401" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="27.9781" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="27.2161" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="8.5344" y="26.4541" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="26.4541" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="27.2161" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="27.9781" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="28.7401" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="29.5021" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="31.8516" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="32.6136" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.3754" y="33.3756" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.4389" y="34.1376" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="6.6929" y="34.8361" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="7.1374" y="35.4711" extent="1-16" drill="0.3302" diameter="0.0254"/>
+<via x="7.7089" y="35.9156" extent="1-16" drill="0.3302" diameter="0.0254"/>
 </signal>
 <signal name="SPI_CLK">
 <contactref element="U$1" pad="P$17"/>
@@ -757,23 +760,23 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$13" class="2">
 <contactref element="C2" pad="2"/>
 <contactref element="U$1" pad="P$35"/>
-<wire x1="7.4295" y1="28.0266" x2="7.4295" y2="25.0555" width="0.508" layer="1"/>
-<wire x1="7.4295" y1="25.0555" x2="7.433" y2="25.052" width="0.365759375" layer="1" curve="90"/>
+<wire x1="7.4295" y1="28.0266" x2="7.4295" y2="25.0555" width="0.95" layer="1"/>
+<wire x1="7.4295" y1="25.0555" x2="7.433" y2="25.052" width="0.95" layer="1" curve="90"/>
 </signal>
 <signal name="N$10" class="2">
 <contactref element="C1" pad="2"/>
 <contactref element="L1" pad="2"/>
 <contactref element="C2" pad="1"/>
-<wire x1="7.4295" y1="32.116" x2="7.4295" y2="30.7363" width="0.508" layer="1"/>
-<wire x1="7.4295" y1="30.7363" x2="7.4318" y2="30.734" width="0.365759375" layer="1" curve="90"/>
-<wire x1="7.4318" y1="30.734" x2="7.4318" y2="29.3289" width="0.508" layer="1"/>
-<wire x1="7.4318" y1="29.3289" x2="7.4295" y2="29.3266" width="0.365759375" layer="1" curve="-90"/>
+<wire x1="7.4295" y1="32.116" x2="7.4295" y2="30.7363" width="0.95" layer="1"/>
+<wire x1="7.4295" y1="30.7363" x2="7.4318" y2="30.734" width="0.95" layer="1" curve="90"/>
+<wire x1="7.4318" y1="30.734" x2="7.4318" y2="29.3289" width="0.95" layer="1"/>
+<wire x1="7.4318" y1="29.3289" x2="7.4295" y2="29.3266" width="0.95" layer="1" curve="-90"/>
 </signal>
 <signal name="N$15" class="2">
 <contactref element="C1" pad="1"/>
 <contactref element="U$3" pad="FEED"/>
-<wire x1="11.748" y1="35.306" x2="9.3195" y2="35.306" width="0.508" layer="1"/>
-<wire x1="9.3195" y1="35.306" x2="7.4295" y2="33.416" width="0.508" layer="1" curve="90"/>
+<wire x1="11.748" y1="35.306" x2="9.3195" y2="35.306" width="0.95" layer="1"/>
+<wire x1="9.3195" y1="35.306" x2="7.4295" y2="33.416" width="0.95" layer="1" curve="90"/>
 </signal>
 <signal name="N$14" class="3">
 <contactref element="U$1" pad="P$30"/>
@@ -903,6 +906,24 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="17.78" y1="18.796" x2="16.283" y2="18.402" width="0.4572" layer="1"/>
 </signal>
 </signals>
+<errors>
+<approved hash="3,1,658e07f0078865f6"/>
+<approved hash="19,1,0ebde593f12f44eb"/>
+<approved hash="19,1,cf4a4f46c44a1aac"/>
+<approved hash="19,1,805dc23c7ad45859"/>
+<approved hash="19,1,a0a2ceae4fd0fd6f"/>
+<approved hash="19,1,0b47c6fe11c2680b"/>
+<approved hash="5,1,2338f06e359440f5"/>
+<approved hash="19,1,321124d32688346c"/>
+<approved hash="19,1,0eadcc5a925d7332"/>
+<approved hash="19,1,d0831f57de4ceb62"/>
+<approved hash="19,1,cd9c17a7d6e8f629"/>
+<approved hash="19,1,6e4a5b7fa04f6f80"/>
+<approved hash="19,1,7dc35c5fb819637f"/>
+<approved hash="19,1,29833f4121da333e"/>
+<approved hash="19,1,4811f761b7a89db1"/>
+<approved hash="19,1,093a992c7e4ef450"/>
+</errors>
 </board>
 </drawing>
 </eagle>

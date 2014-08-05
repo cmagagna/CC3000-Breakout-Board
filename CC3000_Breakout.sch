@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2107,8 +2107,8 @@ Single endded antenna. Common with smaller chip antennas. CHIP4 package is the G
 <class number="1" name="vcc" width="1.016" drill="0">
 <clearance class="1" value="0.2032"/>
 </class>
-<class number="2" name="antenna" width="0.36321875" drill="0">
-<clearance class="2" value="0.3048"/>
+<class number="2" name="antenna" width="0.95" drill="0">
+<clearance class="2" value="0.1524"/>
 </class>
 <class number="3" name="1.8v" width="0.4572" drill="0">
 <clearance class="3" value="0.254"/>
@@ -2160,7 +2160,7 @@ Single endded antenna. Common with smaller chip antennas. CHIP4 package is the G
 <text x="301.26" y="27.9" size="1.9304" layer="94" font="vector" ratio="6">Chris Magagna, based on Matt Bigarani's original design</text>
 <text x="301.26" y="23.9" size="2.54" layer="94" font="vector">cmagagna@yahoo.com</text>
 <text x="301.26" y="31.9" size="2.54" layer="94" font="vector">TI CC3000 Breakout</text>
-<text x="391.16" y="7.62" size="2.54" layer="104">1.1</text>
+<text x="391.16" y="7.62" size="2.54" layer="104">1.4</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="182.88" y="109.22"/>
